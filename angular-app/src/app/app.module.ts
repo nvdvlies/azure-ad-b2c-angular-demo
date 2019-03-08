@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { MsalModule, MsalInterceptor } from '@azure/msal-angular';
 
@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MsalModule.forRoot({
       clientID: '875f4002-f526-422c-ad8e-b3ddbce25841',
       authority: 'https://login.microsoftonline.com/tfp/AzureB2CDemo3.onmicrosoft.com/B2C_1_signin/',
